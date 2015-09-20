@@ -22,7 +22,7 @@ class PluginBlocktypePagestatus extends SystemBlocktype {
     }
 
     public static function get_categories() {
-        return array('general' => 22500);
+        return array('general' => 21500);
     }
 
     public static function get_viewtypes() {
@@ -42,9 +42,9 @@ class PluginBlocktypePagestatus extends SystemBlocktype {
     }
 
     public static function allowed_in_view(View $view) {
-        // Only allowed in users' portfolio page
+        // Only allowed in users' and group's page
         return $view->get('type') == 'portfolio'
-            && $view->get('group') == null
+            && ($view->get('owner') != null || $view->get('group') != null)
             && $view->get('institution') == null;
     }
 
