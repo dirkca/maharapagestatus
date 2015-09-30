@@ -158,10 +158,10 @@ class PluginBlocktypePagestatus extends SystemBlocktype {
         }
         else {
             return $statusoptions = array(
-                0 => get_string('notset', 'blocktype.pagestatus'),
-                1 => get_string('inprogress', 'blocktype.pagestatus'),
-                2 => get_string('needhelp', 'blocktype.pagestatus'),
-                3 => get_string('ready', 'blocktype.pagestatus'),
+                0 => get_string('inprogress', 'blocktype.pagestatus'),
+                1 => get_string('needhelp', 'blocktype.pagestatus'),
+                2 => get_string('ready', 'blocktype.pagestatus'),
+				3 => get_string('notset', 'blocktype.pagestatus'),
             );
         }
     }
